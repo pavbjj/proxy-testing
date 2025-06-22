@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future Value Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Future Value Calculator</h1>
+        <form action="/calculate" method="post">
+            <label for="principal">Starting Savings (£):</label>
+            <input type="number" id="principal" name="principal" step="0.01" 
+                value="{{ form_data['principal'] if form_data else '' }}" required>
+
+            <label for="rate">Annual Interest Rate (%):</label>
+            <input type="number" id="rate" name="rate" step="0.01" 
+                value="{{ form_data['rate'] if form_data else '' }}" required>
+
+            <label for="contribution">Yearly Contribution (£):</label>
+            <input type="number" id="contribution" name="contribution" step="0.01" 
+                value="{{ form_data['contribution'] if form_data else '' }}" required>
+
+            <label for="years">Number of Years:</label>
+            <input type="number" id="years" name="years" 
+                value="{{ form_data['years'] if form_data else '' }}" required>
+
+            <button type="submit">Calculate</button>
+        </form>
+    </div>
+</body>
+</html>
+

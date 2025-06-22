@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculation Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculation Result</h1>
+        <p>The future value of your investment is:</p>
+        <h2>£{{ amount }}</h2>
+        <form action="/back" method="post">
+            <input type="hidden" name="principal" value="{{ form_data['principal'] }}">
+            <input type="hidden" name="rate" value="{{ form_data['rate'] }}">
+            <input type="hidden" name="contribution" value="{{ form_data['contribution'] }}">
+            <input type="hidden" name="years" value="{{ form_data['years'] }}">
+            <button type="submit">Back to Calculator</button>
+        </form>
+    </div>
+</body>
+</html>
+
