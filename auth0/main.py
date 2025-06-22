@@ -15,9 +15,9 @@ app.secret_key = os.getenv("FLASK_SECRET_KEY", "supersecretkey")  # Make sure to
 url = os.environ.get("URL", "http://ccie.pl")
 
 # Auth0 configuration
-AUTH0_DOMAIN = os.getenv("AUTH0_DOMAIN", "dev-vad8cgihf1nept5s.us.auth0.com")
-AUTH0_CLIENT_ID = os.getenv("AUTH0_CLIENT_ID", "aaz3BknF8sQ4TXihAXfSe80yI2Es3SJ1")
-AUTH0_CLIENT_SECRET = os.getenv("AUTH0_CLIENT_SECRET", "zwYCwmtONO0RuJEstXsqSWtu9RylQsZ6ty8-IB6hWcv1UdD3-UaT5VqoXydqVV9I")
+AUTH0_DOMAIN = os.getenv("AUTH0_DOMAIN", "")
+AUTH0_CLIENT_ID = os.getenv("AUTH0_CLIENT_ID", "")
+AUTH0_CLIENT_SECRET = os.getenv("AUTH0_CLIENT_SECRET", "")
 AUTH0_CALLBACK_URL = os.getenv("AUTH0_CALLBACK_URL", "http://centos.kuligowski.co.uk:5155/callback")
 AUTH0_AUDIENCE = os.getenv("AUTH0_AUDIENCE", f"https://{AUTH0_DOMAIN}/userinfo")
 
